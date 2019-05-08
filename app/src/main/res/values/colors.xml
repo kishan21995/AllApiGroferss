@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorGray">#d9d9d9</color>
+    <color name="textcolor">#6c6c6c</color>
+    <color name="phonetextcolor">#f1f0f0</color>
+    <color name="cardbackgro_color">#f1f0f0</color>
+    <color name="text_color">#5c6ac4</color>
+    <color name="textbutton_color">#ffffff</color>
+    <color name="colorback">#E43F3F</color>
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="primary_darker">#CC1D1D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primary">#E43F3F</color>
+    <color name="smart">#f1f0f0</color>
+    <color name="exclusive">#3c3b3b</color>
+    <color name="nav_color">#ffe198</color>
+    <color name="nav_welcolor">#dedbdb</color>
+    <color name="member">#918f8f</color>
+    <color name="nav_colors">#ffd25d</color>
+    <color name="location_color">#FF000000</color>
+    <color name="card_color">#9B9595</color>
+    <color name="off_color">#07A50D</color>
+    <color name="view_color">#E0DCDC</color>
+    <color name="colorBlack">#000</color>
+    <color name="color_lightt">#857C7C</color>
+    <color name="view_color1">#987</color>
+    <color name="button_back">#4caf1b</color>
+    <color name="shadow">#eefafc</color>
+    <color name="skyy">#3baeb4</color>
+    <color name="shad">#857C7C</color>
+    <color name="heading">#F44336</color>
+    <color name="card">#53C4D5</color>
+
+
+
+</resources>
