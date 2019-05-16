@@ -1,12 +1,10 @@
-package marketplace.jpr.com.allapigroferss;
+package marketplace.jpr.com.allapigroferss.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
@@ -16,17 +14,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.List;
 
 import marketplace.jpr.com.allapigroferss.Adapter.BestSellingAdapter;
 import marketplace.jpr.com.allapigroferss.Adapter.BlockBusterAdapter;
+import marketplace.jpr.com.allapigroferss.Adapter.CategoryDashboardAdapter;
+import marketplace.jpr.com.allapigroferss.R;
 import marketplace.jpr.com.allapigroferss.models.dashboard.BestSelling;
 import marketplace.jpr.com.allapigroferss.models.dashboard.BlockbusterSaver;
+import marketplace.jpr.com.allapigroferss.models.dashboard.Category;
 import marketplace.jpr.com.allapigroferss.models.dashboard.CategoryResponse;
-import marketplace.jpr.com.allapigroferss.models.dashboard.TodaySaver;
 import marketplace.jpr.com.allapigroferss.retrofit.RestClient;
 import marketplace.jpr.com.allapigroferss.utils.Utils;
 import retrofit2.Call;
@@ -39,7 +38,8 @@ public class MainActivity extends AppCompatActivity
 
     private List<BestSelling> itemList;
     private List<BlockbusterSaver> itemList1;
-    private List<TodaySaver>itemList2;
+    //private List<TodaySaver>itemList2;
+    private List<Category>itemList2;
 
 
 
@@ -142,6 +142,7 @@ public class MainActivity extends AppCompatActivity
                         if (response.body().getStatus()) {
                             itemList = response.body().getBestSelling();
                             itemList1=response.body().getBlockbusterSavers();
+                            itemList2=response.body().getCategories();
 
 
                             BestSellingAdapter bestSellingAdapter = new BestSellingAdapter(getApplicationContext());
@@ -161,7 +162,24 @@ public class MainActivity extends AppCompatActivity
                             recyclerView1.setAdapter(blockBusterAdapter);
 
 
+                            CategoryDashboardAdapter categoryDashboardAdapter=new CategoryDashboardAdapter(getApplicationContext());
+                            categoryDashboardAdapter.setdata(itemList2);
+                            LinearLayoutManager linearLayoutManager2=new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false);
+                            recyclerView2.setLayoutManager(linearLayoutManager2);
+                            recyclerView2.setAdapter(categoryDashboardAdapter);
 
+                            /// click listner
+                            categoryDashboardAdapter.setSellingListInterface(new CategoryDashboardAdapter.SellingListInterface() { ///
+                                @Override
+                                ///
+                                public void sellinglistitem(String id) {
+                                    Intent intent = new Intent(MainActivity.this, SubCatrgoryActivity.class);
+                                    intent.putExtra("id", id);
+                                    startActivity(intent);
+                                }                                                                                        ///
+
+
+                            });
 
 
 
