@@ -1,4 +1,4 @@
-package marketplace.jpr.com.allapigroferss.models;
+package marketplace.jpr.com.allapigroferss.models.login;
 
 
 import com.google.gson.annotations.Expose;
