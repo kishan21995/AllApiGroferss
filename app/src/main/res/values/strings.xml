@@ -15,7 +15,6 @@
     <string name="menu_send">Send</string>
 
 
-
     <string name="Msg">We will Send SMS with a conformation code to  </string>
     <string name="code">this number</string>
     <string name="get"> Use referred code and get up to 150 Grofers Cash</string>
@@ -96,10 +95,6 @@
     <string name="select">Select a plan which suits your needs</string>
     <string name="happy">Happy Bachat Club Member</string>
     <string name="good">"Good discount through Bachat Club.we are saving approx. 600 on a purchase of around 4000 in a month"</string>
-
-
-
-
 
 
 </resources>
