@@ -40,6 +40,7 @@ public class BlockBusterAdapter extends RecyclerView.Adapter<BlockBusterAdapter.
 
     public void setdata(List<BlockbusterSaver> itemList) {
         this.blockBusterAdapter = itemList;
+
     }  ////
 
     @Override
